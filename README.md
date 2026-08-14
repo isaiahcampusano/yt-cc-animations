@@ -1,6 +1,6 @@
 # YouTube Caption Override
 
-A small Chrome extension that makes YouTube captions use your preferred position, font size, text color, and background opacity—even when a video includes its own caption styling.
+Chrome extension that forces YouTube captions to use your chosen position, size, color, and background opacity.
 
 ## Install it
 
