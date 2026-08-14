@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Caption Override</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="cc-badge" aria-hidden="true">CC</span>
+        <div>
+          <h1>Caption Override</h1>
+          <p>Your settings apply to every YouTube video.</p>
+        </div>
+      </header>
+
+      <form id="settings-form">
+        <fieldset>
+          <legend>Position</legend>
+          <div class="segmented-control">
+            <label>
+              <input type="radio" name="position" value="top" />
+              <span>Top</span>
+            </label>
+            <label>
+              <input type="radio" name="position" value="bottom" />
+              <span>Bottom</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <label class="field" for="font-size">
+          <span>Font size</span>
+          <select id="font-size" name="fontSize">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">X-Large</option>
+          </select>
+        </label>
+
+        <label class="field color-field" for="text-color">
+          <span>Text color</span>
+          <span class="color-control">
+            <output id="color-value" for="text-color">#FFFFFF</output>
+            <input id="text-color" name="textColor" type="color" value="#ffffff" />
+          </span>
+        </label>
+
+        <label class="slider-field" for="background-opacity">
+          <span>
+            <span>Background opacity</span>
+            <output id="opacity-value" for="background-opacity">75%</output>
+          </span>
+          <input
+            id="background-opacity"
+            name="backgroundOpacity"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value="75"
+          />
+        </label>
+      </form>
+
+      <p id="save-status" class="save-status" role="status" aria-live="polite">Saved automatically</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
